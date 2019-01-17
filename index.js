@@ -1,3 +1,5 @@
-const dishDB = require('./data/db');
+const server = require('./server');
 
-dishDB.getRecipes().then(res => console.log(res));
+const port = process.env.PORT || 5000;
+
+server.listen(port, () => console.log('server is live'));
